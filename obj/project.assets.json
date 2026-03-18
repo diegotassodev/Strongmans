@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/Strongmans/Strongmans.csproj",
+      "projectUniqueName": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/Strongmans.csproj",
       "projectName": "Strongmans",
-      "projectPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/Strongmans/Strongmans.csproj",
+      "projectPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/Strongmans.csproj",
       "packagesPath": "/home/oriyon/.nuget/packages/",
-      "outputPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/Strongmans/obj/",
+      "outputPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/oriyon/.nuget/NuGet/NuGet.Config"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

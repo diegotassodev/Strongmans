@@ -1,134 +1,131 @@
-# Especificações Técnicas: Sistema de Cadastro e Consulta de Strongmans
+# Strongmans - Sistema de Gerenciamento de Atletas
 
-## 1. Estruturas de Dados
+## 📋 Descrição
 
-### 1.1 Dicionário de Usuários (`LoginUsuario`)
-
-Estrutura responsável pelo armazenamento das credenciais de acesso ao sistema.
-
-- **Chave (Key):** Nome do usuário
-- **Valor (Value):** Senha do usuário
-
-Finalidade: Permitir autenticação baseada em correspondência exata de chave e valor.
+Sistema de gerenciamento de informações sobre atletas de **Strongman**. Permite cadastrar, visualizar e remover strongmans, além de registrar seus levantamentos e recordes pessoais. Esse sistema utiliza orientação a objetos aplicando conceitos de herança.
 
 ---
-### 1.2 Dicionário de Strongmans (`Strongmans`)
 
-Estrutura responsável pelo armazenamento dos registros de atletas e seus respectivos recordes.
+## 🏗️ Estrutura do Projeto
 
-- **Chave externa:** Nome do strongman
-- **Valor:** Dicionário interno contendo os levantamentos:
+### Modelos de Dados
 
-Dicionário interno:
+#### `Usuario`
+Representa um usuário do sistema com credenciais de acesso.
+- **Propriedades:**
+  - `Nome`: Identificador do usuário
+  - `Email`: Email associado à conta
+  - `Senha`: Senha para autenticação
+- **Armazenamento:** `List<Usuario>`
 
-- `"BentPress"` → Peso levantado no Bent Press
-- `"FloorPress"` → Peso levantado no Floor Press
+#### `Strongman`
+Representa um atleta de Strongman com seus dados físicos e histórico de levantamentos.
+- **Propriedades:**
+  - `Nome`: Nome do atleta
+  - `AlturaMetros`: Altura em metros
+  - `PesoKilogramas`: Peso em quilogramas
+- **Relacionamentos:**
+  - `listaLevantamentosStrongman`: Lista de levantamentos realizados pelo atleta
+- **Armazenamento:** `List<Strongman>` estática
 
-**Finalidade:** Organizar dados de forma simples.
-
----
-## 2. Funções do Sistema
-
-### 2.1 Funções de Abstração
-
-- **ExibirTitulo()**  
-    Responsável por padronizar a apresentação visual dos títulos das interfaces.
-
-- **AdicionandoUsuarios()**  
-    Responsável por popular o dicionário `LoginUsuario` com dados pré-configurados.
-
-- **AdicionandoStrongmans()**  
-    Responsável por popular o dicionário `Strongmans` com dados iniciais.
-
----
-### 2.2 Fluxo de Autenticação
-
-- **ExibirInterfaceLogin()**  
-    Apresenta a interface de login ao usuário.
-
-- **EntradaNomeUsuario(()**  
-    Captura o nome do usuário via entrada padrão.
-
-- **EntradaSenhaUsuario()**  
-    Captura a senha via entrada padrão.
-
-- **ValidandoLogin()**  
-    Processo:
-    1. Verifica se o nome do usuário existe como chave no dicionário `LoginUsuario`.
-    2. Caso exista, compara a senha informada com o valor associado à chave.
-    3. Se ambas as verificações forem verdadeiras → autenticação concedida.
-    4. Caso contrário → exibe mensagem:  
-        `"Usuário ou senha incorretos"`.
-
-- **ExibirInterfacePrincipal()**  
-    Exibe o menu principal após autenticação bem-sucedida.
+#### `Levantamento`
+Registra um levantamento específico realizado por um strongman.
+- **Propriedades:**
+  - `Nome`: Tipo do levantamento (ex: Deadlift, Log Lift, Atlas Stone)
+  - `QuantiaPeso`: Peso levantado em quilogramas
+  - `AnoRealizado`: Ano em que o levantamento foi realizado
 
 ---
-## 3. Menu Principal do Sistema
 
-Após login válido, o sistema apresenta as seguintes opções:
+## 🎯 Funcionalidades
 
----
-### 3.1 Adicionar Strongman
+### Menu de Login
+- Autenticação de usuários
+- Validação de credenciais cadastradas
+- Acesso seguro ao sistema
 
-Fluxo:
+### Menu Principal
+Após autenticação bem-sucedida:
 
-1. Solicita o nome do strongman.
-2. Cria nova chave no dicionário `Strongmans`.
-3. Solicita o peso no **Bent Press**.
-4. Solicita o peso no **Floor Press**.
-5. Armazena os valores no dicionário interno associado ao nome.
-6. Retorna ao menu principal.
+1. **Adicionar Strongman** - Cadastra um novo atleta com seus dados físicos
+2. **Remover Strongman** - Deleta um atleta do sistema
+3. **Mostrar Strongmans** - Exibe lista completa de atletas cadastrados
+4. **Sair** - Encerra o programa
 
----
-### 3.2 Mostrar Strongmans
-
-Fluxo:
-
-1. Percorre todas as chaves do dicionário `Strongmans`.
-2. Exibe a lista completa de nomes cadastrados.
-3. Retorna ao menu principal.
+### Menus Adicionais (Expansão Futura)
+- **Menu de Usuários:** Adicionar, visualizar e remover usuários
+- **Menu de Levantamentos:** Gerenciar recordes e levantamentos dos atletas
 
 ---
-### 3.3 Pesquisar Strongman
 
-Fluxo:
+## 📁 Organização das Pastas
 
-1. Solicita o nome do strongman.
-2. Verifica se a chave existe no dicionário `Strongmans`.
-    - Se não existir → exibe mensagem de erro.
-    - Se existir → recupera diretamente o dicionário interno associado.
-
-3. Obtém:
-    - Valor de `"BentPress"`: Conforme a chave do dicionário dentro do dicionário.
-    - Valor de `"FloorPress"`: Conforme o valor do dicionário dentro do dicionário.
-
-4. Exibe ficha técnica do atleta contendo seus recordes.
-5. Retorna ao menu principal.    
-
----
-### 3.4 Excluir Strongman
-
-Fluxo:
-
-1. Solicita o nome do strongman.
-2. Verifica se a chave existe.
-3. Remove o Strongman
-4. Retorna ao menu principal.
-
----
-### 3.5 Sair
-
-1. Exibe mensagem informando encerramento do sistema.
-2. Finaliza a execução do programa.
+```
+Strongmans/
+├── Modelos/              # Classes de dados
+│   ├── Usuario.cs
+│   ├── Strongman.cs
+│   └── Levantamento.cs
+├── Menus/                # Interfaces de usuário
+│   ├── Menu.cs           # Classe base com funcionalidades comuns
+│   ├── MenuLogin.cs
+│   ├── MenuPrincipal.cs
+│   ├── MenuStrongman/    # Submenus do strongman
+│   │   ├── MenuAdicionarStrongman.cs
+│   │   ├── MenuExibirStrongmans.cs
+│   │   └── MenuRemoverStrongmans.cs
+│   └── MenuUsuario/      # Submenus do usuário
+│       ├── MenuAdicionarUsuario.cs
+│       ├── MenuExibirUsuarios.cs
+│       └── MenuRemoverUsuario.cs
+├── Testes/               # Dados pré-populados para testes
+│   ├── PopularUsuarios.cs
+│   └── PopularStrongmans.cs
+├── Program.cs            # Ponto de entrada
+└── Strongmans.csproj     # Configuração do projeto
+```
 
 ---
-# 4. Fluxo Geral do Algoritmo
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- **.NET 8.0** ou superior
+- **C# 12.0** ou superior
+
+### Execução
+```bash
+dotnet run
+```
+
+---
+
+## 💡 Dados Iniciais (Testes)
+
+O sistema é pré-populado com dados de atletas reais de Strongman para facilitar testes:
+
+- **Eddie Hall** - Deadlift 500kg (2016)
+- **Hafthor Björnsson** - Deadlift 501kg (2020)
+- **Zydrunas Savickas** - Log Lift 228kg, Deadlift 460kg
+- **Tom Stoltman** - Atlas Stone 286kg (2021)
+- **Oleksii Novikov** - Deadlift 465kg (2022)
+- E mais...
+
+---
+
+## 🔧 Detalhes Técnicos
+
+- **Paradigma:** Orientação a Objetos
+- **Persistência:** Em memória (sem banco de dados)
+- **Interface:** Terminal/Console
+
+---
+## Fluxo Geral do Algoritmo
 
 ```cs
 Inicialização  
 │  
-├── Popular dicionários iniciais  
+├── Popular Listas iniciais  
 │  
 ├── Exibir Tela de Login  
 │   ├── Solicitar Usuário  
