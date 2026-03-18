@@ -4,4 +4,4 @@ using Strongmans.Testes;
 
 PopularUsuarios.Executar();
 PopularStrongmans.Executar();
-MenuLogin.Exibir();
+MenuLogin.Executar();

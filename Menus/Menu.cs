@@ -1,5 +1,5 @@
 namespace Strongmans.Menus;
-internal class Menu {
+internal abstract class Menu {
 
     public static void ExibirTitulo (string titulo) {
         int quantiaLetrasTitulo = titulo.Length;
@@ -15,6 +15,6 @@ internal class Menu {
     public static void RetornandoTelaPrincipal() {
         Console.WriteLine ("\nPressione qualquer tecla para continuar");
         Console.ReadKey();
-        MenuPrincipal.Exibir();
+        MenuPrincipal.Executar();
     }
 }

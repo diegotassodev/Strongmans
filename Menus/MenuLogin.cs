@@ -3,7 +3,7 @@ using Strongmans.Modelos;
 namespace Strongmans.Menus;
 internal class MenuLogin : Menu {
 
-    public static void Exibir() {
+    public static void Executar() {
         ExibirTitulo("SISTEMA DE LOGIN");
         ValidandoLogin();
     }
@@ -38,7 +38,7 @@ internal class MenuLogin : Menu {
                 if (usuarioDigitado.Senha!.Equals(senha)) {
                     Console.WriteLine("Login realizado com sucesso!");
                     Thread.Sleep(1000);
-                    MenuPrincipal.Exibir();
+                    MenuPrincipal.Executar();
                 }
                 else {
                     Console.WriteLine("Usuário ou senha incorretos!");

@@ -1,9 +1,9 @@
 namespace Strongmans.Modelos;
 internal class Strongman {
 
-    public string? Nome {get;}
-    public double AlturaMetros {get;}
-    public double PesoKilogramas {get;}
+    public string? Nome {get; set;}
+    public double AlturaMetros {get; set;}
+    public double PesoKilogramas {get; set;}
 
     internal List<Levantamento> listaLevantamentosStrongman = new();
     internal static List<Strongman> listaStrongmans = new();

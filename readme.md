@@ -48,9 +48,10 @@ Registra um levantamento específico realizado por um strongman.
 Após autenticação bem-sucedida:
 
 1. **Adicionar Strongman** - Cadastra um novo atleta com seus dados físicos
-2. **Remover Strongman** - Deleta um atleta do sistema
-3. **Mostrar Strongmans** - Exibe lista completa de atletas cadastrados
-4. **Sair** - Encerra o programa
+2. **Editar Strongman** - Atualiza informações de um atleta cadastrado
+3. **Remover Strongman** - Deleta um atleta do sistema
+4. **Mostrar Strongmans** - Exibe lista completa de atletas cadastrados
+5. **Sair** - Encerra o programa
 
 ### Menus Adicionais (Expansão Futura)
 - **Menu de Usuários:** Adicionar, visualizar e remover usuários
@@ -72,6 +73,7 @@ Strongmans/
 │   ├── MenuPrincipal.cs
 │   ├── MenuStrongman/    # Submenus do strongman
 │   │   ├── MenuAdicionarStrongman.cs
+│   │   ├── MenuEditarStrongman.cs
 │   │   ├── MenuExibirStrongmans.cs
 │   │   └── MenuRemoverStrongmans.cs
 │   └── MenuUsuario/      # Submenus do usuário
@@ -135,8 +137,8 @@ Inicialização
 └── Se autenticado:  
       └── Exibir Menu Principal  
             ├── Adicionar Strongman  
+            ├── Remover Strongman  
+            ├── Editar Strongman
             ├── Mostrar Strongmans  
-            ├── Pesquisar Strongman  
-            ├── Excluir Strongman  
             └── Sair
 ```

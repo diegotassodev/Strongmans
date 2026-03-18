@@ -2,6 +2,7 @@ using Strongmans.Modelos;
 
 namespace Strongmans.Menus;
 internal class MenuAdicionarUsuario : Menu {
+    
     public static void Executar() {
         ExibirTitulo("Adicionar Usuário");
         Console.Write("Digite o nome do usuário: ");
