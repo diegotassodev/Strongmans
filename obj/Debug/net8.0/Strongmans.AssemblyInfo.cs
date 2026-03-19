@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Strongmans")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78a3a261a8f97601750b5254d019b1bcd269da92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9542c865de058de26ebc102444c5f5c66125c0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Strongmans")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Strongmans")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

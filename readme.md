@@ -53,10 +53,6 @@ Após autenticação bem-sucedida:
 4. **Mostrar Strongmans** - Exibe lista completa de atletas cadastrados
 5. **Sair** - Encerra o programa
 
-### Menus Adicionais (Expansão Futura)
-- **Menu de Usuários:** Adicionar, visualizar e remover usuários
-- **Menu de Levantamentos:** Gerenciar recordes e levantamentos dos atletas
-
 ---
 
 ## 📁 Organização das Pastas
