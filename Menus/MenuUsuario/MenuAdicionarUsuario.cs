@@ -13,7 +13,6 @@ internal class MenuAdicionarUsuario : Menu {
         string senhaUsuario = Console.ReadLine()!;
         try {
             Usuario usuario = new Usuario(nomeUsuario, emailUsuario, senhaUsuario);
-            Usuario.listaUsuarios.Add(usuario);
             Console.WriteLine("Usuário adicionado com sucesso!");
         } 
         catch {

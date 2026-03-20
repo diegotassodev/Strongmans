@@ -17,4 +17,11 @@ internal abstract class Menu {
         Console.ReadKey();
         MenuPrincipal.Executar();
     }
+
+    public static void RetornandoTelaAdmin() {
+        Console.WriteLine ("\nPressione qualquer tecla para continuar");
+        Console.ReadKey();
+        MenuAdmin.Executar();
+    }
+    
 }

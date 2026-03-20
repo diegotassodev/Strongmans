@@ -33,19 +33,18 @@ internal class MenuLogin : Menu {
     private static string MascararSenha() {
         var senha = new StringBuilder();
         while (true) {
-            var tecla = Console.ReadKey(intercept: true);
-
-            if (tecla.Key == ConsoleKey.Enter) break;
-            else if (tecla.Key == ConsoleKey.Backspace && senha.Length > 0) {
+            var letra = Console.ReadKey(intercept: true);
+            if (letra.Key == ConsoleKey.Enter) break;
+            else if (letra.Key == ConsoleKey.Backspace && senha.Length > 0) {
                 senha.Remove(senha.Length - 1, 1);
                 Console.Write("\b \b");
             }
-            else if (!char.IsControl(tecla.KeyChar)) {
-                senha.Append(tecla.KeyChar);
+            else if (!char.IsControl(letra.KeyChar)) {
+                senha.Append(letra.KeyChar);
                 Console.Write("*");
             }
         }
-        Console.WriteLine("");
+        Console.WriteLine();
         return senha.ToString();
     }
 
@@ -58,7 +57,8 @@ internal class MenuLogin : Menu {
                 if (usuarioDigitado.Senha!.Equals(senha)) {
                     Console.WriteLine("Login realizado com sucesso!");
                     Thread.Sleep(1000);
-                    MenuPrincipal.Executar();
+                    if (usuarioDigitado.GetType().Name == "Admin") MenuAdmin.Executar();
+                    else MenuPrincipal.Executar();
                 }
                 else {
                     Console.WriteLine("Usuário ou senha incorretos!");

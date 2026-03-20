@@ -5,8 +5,6 @@ internal class MenuExibirUsuarios : Menu {
     
     public static void Executar() {
         ExibirTitulo("Lista Usuários");
-        Console.WriteLine("Lista de Usuários:");
-        Usuario.listaUsuarios.ForEach(usuario => Console.WriteLine($"{usuario.Nome} - {usuario.Email} - {usuario.Senha}"));
-        Console.ReadKey();
+        Usuario.listaUsuarios.ForEach(usuario => Console.WriteLine($"[{usuario.Id}] {usuario.Nome} - {usuario.Email} - {usuario.Senha}"));
     }
 }

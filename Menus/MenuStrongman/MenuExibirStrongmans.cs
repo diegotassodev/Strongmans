@@ -7,7 +7,7 @@ internal class MenuExibirStrongmans : Menu {
         ExibirTitulo("Lista Strongmans");
         if (Strongman.listaStrongmans.Count > 0) {
             foreach(Strongman strongman in Strongman.listaStrongmans) {
-                Console.WriteLine("");
+                Console.WriteLine($"ID: {strongman.Id}");
                 Console.WriteLine($"Nome: {strongman.Nome}   ");
                 Console.WriteLine($"Altura: {strongman.AlturaMetros}m");
                 Console.WriteLine($"Peso: {strongman.PesoKilogramas}kg");

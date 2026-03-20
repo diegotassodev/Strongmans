@@ -29,7 +29,6 @@ internal class MenuAdicionarStrongman : Menu {
             Console.Write("Deseja adicionar outro? [S][N]: ");
             opcao = Console.ReadLine()!.Trim().ToUpper();
         }
-        Strongman.listaStrongmans.Add(strongman);
         Console.WriteLine($"Cadastro do {nomeStrongman} completo.");
     }
 }
