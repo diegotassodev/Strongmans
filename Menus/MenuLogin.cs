@@ -1,10 +1,12 @@
 using System.Text;
+using System.Text.Json;
 using Strongmans.Modelos;
 
 namespace Strongmans.Menus;
 internal class MenuLogin : Menu {
 
     public static void Executar() {
+        MenuAdmin.Executar();
         ExibirTitulo("SISTEMA DE LOGIN");
         ValidandoLogin();
     }
@@ -51,6 +53,7 @@ internal class MenuLogin : Menu {
     private static void ValidandoLogin() {
         string email = EntradaEmailUsuario();
         string senha = EntradaSenhaUsuario();
+
         try {
             if (Usuario.listaUsuarios.Any(u => u.Email!.Equals(email))) {
                 Usuario usuarioDigitado = Usuario.listaUsuarios.First(u => u.Email!.Equals(email));

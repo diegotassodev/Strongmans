@@ -5,6 +5,19 @@ internal class MenuExibirUsuarios : Menu {
     
     public static void Executar() {
         ExibirTitulo("Lista Usuários");
-        Usuario.listaUsuarios.ForEach(usuario => Console.WriteLine($"[{usuario.Id}] {usuario.Nome} - {usuario.Email} - {usuario.Senha}"));
+        foreach (Usuario usuario in Usuario.listaUsuarios) {
+            Console.WriteLine($"ID: {usuario.Id}");
+            Console.WriteLine($"Nome: {usuario.Nome}");
+            Console.WriteLine($"Email: {usuario.Email}");
+            Console.WriteLine($"Senha: {usuario.Senha}");
+
+            string nomeTipo = usuario.Tipo switch {
+                "Strongmans.Modelos.Usuario" => "Usuário Comum",
+                "Strongmans.Modelos.Admin" => "Administrador",
+                _ => "Erro"
+            };
+
+            Console.WriteLine($"Tipo: {nomeTipo}\n");           
+        }
     }
 }

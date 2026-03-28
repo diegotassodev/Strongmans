@@ -1,0 +1,18 @@
+{
+  "listaUsuarios": [
+    {
+      "id": 1,
+      "nome": "Diego",
+      "email": "diego@email.com",
+      "senha": "123",
+      "tipo": "Strongmans.Modelos.Usuario"
+    },
+    {
+      "id": 2,
+      "nome": "admin",
+      "email": "root",
+      "senha": "root",
+      "tipo": "Strongmans.Modelos.Admin"
+    }
+  ]
+}

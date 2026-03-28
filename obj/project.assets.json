@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/Strongmans.csproj",
+      "projectUniqueName": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/Strongmans.csproj",
       "projectName": "Strongmans",
-      "projectPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/Strongmans.csproj",
+      "projectPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/Strongmans.csproj",
       "packagesPath": "/home/oriyon/.nuget/packages/",
-      "outputPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/obj/",
+      "outputPath": "/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/oriyon/.nuget/NuGet/NuGet.Config"

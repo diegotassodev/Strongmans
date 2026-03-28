@@ -27,3 +27,18 @@
 /home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/obj/Debug/net8.0/Strongmans.pdb
 /home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/obj/Debug/net8.0/Strongmans.genruntimeconfig.cache
 /home/oriyon/Documentos/Programas Pessoais/Programas C#/03 - Orientação a Objetos Avançada/Strongmans/obj/Debug/net8.0/ref/Strongmans.dll
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.GeneratedMSBuildEditorConfig.editorconfig
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.AssemblyInfoInputs.cache
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.AssemblyInfo.cs
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.csproj.CoreCompileInputs.cache
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.sourcelink.json
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.dll
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/refint/Strongmans.dll
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.pdb
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/bin/Debug/net8.0/Strongmans
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/bin/Debug/net8.0/Strongmans.deps.json
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/bin/Debug/net8.0/Strongmans.runtimeconfig.json
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/bin/Debug/net8.0/Strongmans.dll
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/bin/Debug/net8.0/Strongmans.pdb
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/Strongmans.genruntimeconfig.cache
+/home/oriyon/Documentos/Programas Pessoais/Programas C#/04 - Requisições com Api/Strongmans/obj/Debug/net8.0/ref/Strongmans.dll

@@ -25,10 +25,11 @@ internal class MenuAdicionarStrongman : Menu {
             int anoRealizado; int.TryParse(Console.ReadLine()!, out anoRealizado);
 
             Levantamento levantamento = new (nomeLevantamento, quantiaPeso, anoRealizado);
-            strongman.listaLevantamentosStrongman.Add(levantamento);
+            strongman!.listaLevantamentosStrongman!.Add(levantamento);
             Console.Write("Deseja adicionar outro? [S][N]: ");
             opcao = Console.ReadLine()!.Trim().ToUpper();
         }
+        strongman.SerializarStrongman(); 
         Console.WriteLine($"Cadastro do {nomeStrongman} completo.");
     }
 }

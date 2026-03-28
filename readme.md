@@ -2,11 +2,21 @@
 
 ## 📋 Descrição
 
-Sistema de gerenciamento de informações sobre atletas de **Strongman**. Permite cadastrar, visualizar, editar e remover strongmans, além de registrar seus levantamentos e recordes pessoais. 
+Sistema de gerenciamento de informações sobre atletas de **Strongman**. Permite cadastrar, visualizar, editar e remover strongmans, além de registrar seus levantamentos e recordes pessoais.
 
-Inclui também gerenciamento de usuários e administradores. Esse sistema utiliza orientação a objetos aplicando conceitos de herança.
+Também oferece gerenciamento de usuários e administradores, com autenticação e controle de acesso.
 
----
+## 🧩 O que mudou nesta versão
+
+- Persistência de dados em arquivos JSON (`Dados/dados-strongmans.json` e `Dados/dados-usuarios.json`)
+- Carregamento automático de dados ao iniciar o programa
+- Criação de arquivos vazios quando não existem
+- Serialização em `snake_case` usando `JsonPropertyName`
+- Cadastro de usuário com seleção de tipo: `Administrador (A)` ou `Usuário comum (C)`
+- Edição e remoção de registros por `id`
+- Menus de usuário expandidos com edição e remoção segura
+- Refatoração para reduzir serialização em construtores
+- Base inicial com strongmans reais adicionados para testes
 
 ## 🏗️ Estrutura do Projeto
 
@@ -15,141 +25,128 @@ Inclui também gerenciamento de usuários e administradores. Esse sistema utiliz
 #### `Usuario`
 Representa um usuário do sistema com credenciais de acesso.
 - **Propriedades:**
-  - `Nome`: Identificador do usuário
-  - `Email`: Email associado à conta
-  - `Senha`: Senha para autenticação
-- **Armazenamento:** `List<Usuario>`
+  - `Id`
+  - `Nome`
+  - `Email`
+  - `Senha`
+  - `Tipo`
+- **Armazenamento:** `List<Usuario>` estática
 
 #### `Admin`
 Representa um administrador do sistema, herdando de `Usuario`.
-- **Herança:** Extende `Usuario` com permissões adicionais para gerenciar usuários.
-- **Armazenamento:** Incluído na `List<Usuario>`
+- **Herança:** `Admin` estende `Usuario`
+- **Permissões:** pode gerenciar usuários
 
 #### `Strongman`
-Representa um atleta de Strongman com seus dados físicos e histórico de levantamentos.
+Representa um atleta de Strongman com dados físicos e históricos de levantamento.
 - **Propriedades:**
-  - `Nome`: Nome do atleta
-  - `AlturaMetros`: Altura em metros
-  - `PesoKilogramas`: Peso em quilogramas
-- **Relacionamentos:**
-  - `listaLevantamentosStrongman`: Lista de levantamentos realizados pelo atleta
+  - `Id`
+  - `Nome`
+  - `AlturaMetros`
+  - `PesoKilogramas`
+- **Relacionamento:** `listaLevantamentosStrongman`
 - **Armazenamento:** `List<Strongman>` estática
 
 #### `Levantamento`
 Registra um levantamento específico realizado por um strongman.
 - **Propriedades:**
-  - `Nome`: Tipo do levantamento (ex: Deadlift, Log Lift, Atlas Stone)
-  - `QuantiaPeso`: Peso levantado em quilogramas
-  - `AnoRealizado`: Ano em que o levantamento foi realizado
+  - `Nome`
+  - `QuantiaPeso`
+  - `AnoRealizado`
 
----
+### Persistência
+
+#### `ListaUsuarios`
+Responsável por desserializar `Dados/dados-usuarios.json` e popular `Usuario.listaUsuarios`.
+
+#### `ListaStrongmans`
+Responsável por desserializar `Dados/dados-strongmans.json` e popular `Strongman.listaStrongmans`.
+
 ## 🎯 Funcionalidades
 
-### Menu de Login
-- Autenticação de usuários
-- Validação de credenciais cadastradas
-- Acesso seguro ao sistema
+### Login
+- Autenticação por `email` e `senha`
+- Validação de credenciais existentes
+- Redirecionamento para menu de administrador ou menu principal
 
-### Menu Principal (Acesso para Todos os Usuários)
-Após autenticação bem-sucedida:
+### Menu Principal
+1. **Adicionar Strongman**
+2. **Editar Strongman**
+3. **Remover Strongman**
+4. **Mostrar Strongmans**
+5. **Sair**
 
-1. **Adicionar Strongman** - Cadastra um novo atleta com seus dados físicos
-2. **Editar Strongman** - Atualiza informações de um atleta cadastrado
-3. **Remover Strongman** - Deleta um atleta do sistema
-4. **Mostrar Strongmans** - Exibe lista completa de atletas cadastrados
-5. **Sair** - Encerra o programa
+### Menu do Administrador
+- **Adicionar usuário**
+- **Editar usuário**
+- **Remover usuário**
+- **Mostrar usuários**
+- **Entrar no menu principal**
 
----
 ## 📁 Organização das Pastas
 
 ```
 Strongmans/
-├── Modelos/              # Classes de dados
-│   ├── Usuario.cs
-│   ├── Admin.cs          # Herda de Usuario
+├── Dados/                # Arquivos JSON de persistência
+│   ├── dados-strongmans.json
+│   └── dados-usuarios.json
+├── Modelos/              # Classes de dados e serialização
+│   ├── Admin.cs
+│   ├── ListaStrongmans.cs
+│   ├── ListaUsuarios.cs
+│   ├── Levantamento.cs
 │   ├── Strongman.cs
-│   └── Levantamento.cs
-├── Menus/                # Interfaces de usuário
-│   ├── Menu.cs           # Classe base com funcionalidades comuns
+│   └── Usuario.cs
+├── Menus/                # Menus de interação no console
+│   ├── Menu.cs
+│   ├── MenuAdmin.cs
 │   ├── MenuLogin.cs
-│   ├── MenuAdmin.cs      # Menu para administradores
-│   ├── MenuPrincipal.cs  # Menu para usuários comuns
-│   ├── MenuStrongman/    # Submenus do strongman
+│   ├── MenuPrincipal.cs
+│   ├── MenuStrongman/
 │   │   ├── MenuAdicionarStrongman.cs
 │   │   ├── MenuEditarStrongman.cs
 │   │   ├── MenuExibirStrongmans.cs
 │   │   └── MenuRemoverStrongmans.cs
-│   └── MenuUsuario/      # Submenus do usuário
+│   └── MenuUsuario/
 │       ├── MenuAdicionarUsuario.cs
+│       ├── MenuEditarUsuario.cs
 │       ├── MenuExibirUsuarios.cs
 │       └── MenuRemoverUsuario.cs
-├── Testes/               # Dados pré-populados para testes
-│   ├── PopularUsuarios.cs
-│   └── PopularStrongmans.cs
-├── Program.cs            # Ponto de entrada
+├── Program.cs            # Inicialização e entrada do sistema
 └── Strongmans.csproj     # Configuração do projeto
 ```
 
----
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-- **.NET 8.0** ou superior
-- **C# 12.0** ou superior
+- .NET 8.0 ou superior
+- C# 12.0 ou superior
 
 ### Execução
+
 ```bash
 dotnet run
 ```
 
----
-
-## 💡 Dados Iniciais (Testes)
-
-O sistema é pré-populado com dados de atletas reais de Strongman para facilitar testes:
-
-- **Eddie Hall** - Deadlift 500kg (2016)
-- **Hafthor Björnsson** - Deadlift 501kg (2020)
-- **Zydrunas Savickas** - Log Lift 228kg, Deadlift 460kg
-- **Tom Stoltman** - Atlas Stone 286kg (2021)
-- **Oleksii Novikov** - Deadlift 465kg (2022)
-- E mais...
-
----
+## 💡 Dados Iniciais
+O projeto já carrega registros de teste que incluem:
+- usuário admin padrão `admin` / `root`
+- usuário comum `Diego`
+- strongmans reais como Eddie Hall, Hafthor Björnsson, Zydrunas Savickas, Tom Stoltman e Oleksii Novikov
 
 ## 🔧 Detalhes Técnicos
+- **Persistência:** JSON via `System.Text.Json`
+- **Serialização:** `snake_case` com `JsonPropertyName`
+- **CRUD:** criação, leitura, edição e remoção de usuários e strongmans
+- **Gerenciamento por ID:** edição e remoção usando `id` para reduzir erros por nome duplicado
+- **Design:** responsabilidades de serialização organizadas em classes específicas
 
-- **Paradigma:** Orientação a Objetos com herança (ex: `Admin` herda de `Usuario`)
-- **Persistência:** Em memória (sem banco de dados)
-- **Interface:** Terminal/Console
-- **Controle de Acesso:** Diferenciação entre usuários comuns e administradores
+## 🔁 Fluxo do Programa
 
----
-## Fluxo Geral do Algoritmo
-
-```cs
-Inicialização  
-│  
-├── Popular Listas iniciais  
-│  
-├── Exibir Tela de Login  
-│   ├── Solicitar Usuário  
-│   ├── Solicitar Senha  
-│   └── Validar Credenciais  
-│  
-└── Se autenticado:  
-      ├── Se Admin:  
-      │     └── Exibir Menu Admin  
-      │           ├── Adicionar Usuário  
-      │           ├── Remover Usuário  
-      │           ├── Mostrar Usuários  
-      │           ├── Entrar Menu Principal  
-      │           └── Sair  
-      └── Senão (Usuário comum):  
-            └── Exibir Menu Principal  
-                  ├── Adicionar Strongman  
-                  ├── Editar Strongman  
-                  ├── Remover Strongman  
-                  ├── Mostrar Strongmans  
-                  └── Sair
-```
+1. Verifica existência dos arquivos JSON
+2. Cria arquivos vazios, se necessário
+3. Desserializa os dados para memória
+4. Exibe tela de login
+5. Autentica o usuário
+6. Exibe menu correto conforme tipo de usuário
+7. Executa operações e salva alterações no JSON

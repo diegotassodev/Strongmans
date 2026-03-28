@@ -11,13 +11,13 @@ internal class MenuExibirStrongmans : Menu {
                 Console.WriteLine($"Nome: {strongman.Nome}   ");
                 Console.WriteLine($"Altura: {strongman.AlturaMetros}m");
                 Console.WriteLine($"Peso: {strongman.PesoKilogramas}kg");
-                if (strongman.listaLevantamentosStrongman.Count() > 0) {
+                if (strongman.listaLevantamentosStrongman!.Count() > 0) {
                     Console.WriteLine("Recordes: ");
-                    foreach (Levantamento levantamento in strongman.listaLevantamentosStrongman) {
+                    foreach (Levantamento levantamento in strongman.listaLevantamentosStrongman!) {
                         Console.WriteLine($"- {levantamento.Nome}: {levantamento.QuantiaPeso}kg em {levantamento.AnoRealizado}");
                     }
                 }
-                Console.WriteLine("");
+                Console.WriteLine();
             }
         }
         else {

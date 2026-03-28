@@ -11,12 +11,20 @@ internal class MenuAdicionarUsuario : Menu {
         string emailUsuario = Console.ReadLine()!;
         Console.Write("Digite a senha do usuário: ");
         string senhaUsuario = Console.ReadLine()!;
+        Console.Write("Digite seu tipo de usuário [A] [C]: ");
+        string tipoUsuario = Console.ReadLine()!;
+
         try {
-            Usuario usuario = new Usuario(nomeUsuario, emailUsuario, senhaUsuario);
-            Console.WriteLine("Usuário adicionado com sucesso!");
+            switch (tipoUsuario.ToUpper()) {
+                case "A": Admin admin = new Admin(nomeUsuario, emailUsuario, senhaUsuario); Console.WriteLine("Administrador adicionado com sucesso!");
+                        admin.SerializarUsuario(); break;
+                case "C": Usuario usuario = new Usuario(nomeUsuario, emailUsuario, senhaUsuario); Console.WriteLine("Usuário adicionado com sucesso!");
+                        usuario.SerializarUsuario(); break;
+            }
+            
         } 
-        catch {
-            Console.WriteLine("Ocorreu um erro ao adicionar o usuário.");    
+        catch (Exception ex) {
+            Console.WriteLine($"Ocorreu um erro ao adicionar o usuário: {ex.Message}");    
         }
     }
 }
