@@ -6,7 +6,6 @@ namespace Strongmans.Menus;
 internal class MenuLogin : Menu {
 
     public static void Executar() {
-        MenuAdmin.Executar();
         ExibirTitulo("SISTEMA DE LOGIN");
         ValidandoLogin();
     }
