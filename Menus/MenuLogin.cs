@@ -59,7 +59,7 @@ internal class MenuLogin : Menu {
                 if (usuarioDigitado.Senha!.Equals(senha)) {
                     Console.WriteLine("Login realizado com sucesso!");
                     Thread.Sleep(1000);
-                    if (usuarioDigitado.GetType().Name == "Admin") MenuAdmin.Executar();
+                    if (usuarioDigitado.Tipo == "Strongmans.Modelos.Admin") MenuAdmin.Executar();
                     else MenuPrincipal.Executar();
                 }
                 else {
