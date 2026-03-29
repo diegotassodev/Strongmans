@@ -1,7 +1,7 @@
 {
   "listaStrongmans": [
     {
-      "id": 2,
+      "id": 1,
       "nome": "Louis Cyr",
       "altura_metros": 1.86,
       "peso_kilogramas": 140,
@@ -15,6 +15,396 @@
           "nome": "Floor Press",
           "quantia_peso": 150,
           "ano_realizado": 1900
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Eddie Hall",
+      "altura_metros": 1.90,
+      "peso_kilogramas": 164,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 500,
+          "ano_realizado": 2016
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Hafthor Bjornsson",
+      "altura_metros": 2.06,
+      "peso_kilogramas": 205,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 501,
+          "ano_realizado": 2020
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Brian Shaw",
+      "altura_metros": 2.03,
+      "peso_kilogramas": 200,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 200,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Zydrunas Savickas",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 180,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 228,
+          "ano_realizado": 2015
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Mariusz Pudzianowski",
+      "altura_metros": 1.86,
+      "peso_kilogramas": 120,
+      "levantamentos_strongman": [
+        {
+          "nome": "Atlas Stones",
+          "quantia_peso": 190,
+          "ano_realizado": 2005
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "Bill Kazmaier",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Bench Press",
+          "quantia_peso": 300,
+          "ano_realizado": 1981
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nome": "Magnus Ver Magnusson",
+      "altura_metros": 1.90,
+      "peso_kilogramas": 130,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 400,
+          "ano_realizado": 1995
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nome": "Jouko Ahola",
+      "altura_metros": 1.85,
+      "peso_kilogramas": 125,
+      "levantamentos_strongman": [
+        {
+          "nome": "Truck Pull",
+          "quantia_peso": 20000,
+          "ano_realizado": 1997
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nome": "Mark Henry",
+      "altura_metros": 1.93,
+      "peso_kilogramas": 180,
+      "levantamentos_strongman": [
+        {
+          "nome": "Squat",
+          "quantia_peso": 430,
+          "ano_realizado": 1995
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nome": "Tom Stoltman",
+      "altura_metros": 2.03,
+      "peso_kilogramas": 185,
+      "levantamentos_strongman": [
+        {
+          "nome": "Atlas Stones",
+          "quantia_peso": 286,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nome": "Luke Stoltman",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 221,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nome": "Martins Licis",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 145,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 460,
+          "ano_realizado": 2019
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nome": "Oleksii Novikov",
+      "altura_metros": 1.85,
+      "peso_kilogramas": 135,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 246,
+          "ano_realizado": 2020
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nome": "Mateusz Kieliszkowski",
+      "altura_metros": 1.96,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Frame Carry",
+          "quantia_peso": 400,
+          "ano_realizado": 2019
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nome": "Konstantine Janashia",
+      "altura_metros": 1.90,
+      "peso_kilogramas": 170,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 470,
+          "ano_realizado": 2018
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nome": "Terry Hollands",
+      "altura_metros": 2.01,
+      "peso_kilogramas": 180,
+      "levantamentos_strongman": [
+        {
+          "nome": "Yoke Walk",
+          "quantia_peso": 450,
+          "ano_realizado": 2010
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nome": "Robert Oberst",
+      "altura_metros": 2.01,
+      "peso_kilogramas": 180,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 211,
+          "ano_realizado": 2013
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "nome": "Shivlyakov Mikhail",
+      "altura_metros": 1.88,
+      "peso_kilogramas": 140,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 426,
+          "ano_realizado": 2018
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "nome": "Nick Best",
+      "altura_metros": 1.80,
+      "peso_kilogramas": 140,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 454,
+          "ano_realizado": 2017
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "nome": "Rauno Heinla",
+      "altura_metros": 1.85,
+      "peso_kilogramas": 140,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 476,
+          "ano_realizado": 2020
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "nome": "Evan Singleton",
+      "altura_metros": 1.83,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 455,
+          "ano_realizado": 2022
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "nome": "Graham Hicks",
+      "altura_metros": 1.82,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 220,
+          "ano_realizado": 2020
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "nome": "JF Caron",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 145,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 460,
+          "ano_realizado": 2020
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "nome": "Maxime Boudreault",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 140,
+      "levantamentos_strongman": [
+        {
+          "nome": "Atlas Stones",
+          "quantia_peso": 200,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "nome": "Kevin Faires",
+      "altura_metros": 1.80,
+      "peso_kilogramas": 125,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 217,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "nome": "Iron Biby",
+      "altura_metros": 1.90,
+      "peso_kilogramas": 180,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 230,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "nome": "Pavlo Nakonechnyy",
+      "altura_metros": 1.98,
+      "peso_kilogramas": 160,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 453,
+          "ano_realizado": 2022
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "nome": "Adam Bishop",
+      "altura_metros": 1.83,
+      "peso_kilogramas": 140,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 460,
+          "ano_realizado": 2021
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "nome": "Jerry Pritchett",
+      "altura_metros": 1.91,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Deadlift",
+          "quantia_peso": 467,
+          "ano_realizado": 2016
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "nome": "Dimitar Savatinov",
+      "altura_metros": 1.83,
+      "peso_kilogramas": 150,
+      "levantamentos_strongman": [
+        {
+          "nome": "Log Lift",
+          "quantia_peso": 215,
+          "ano_realizado": 2015
         }
       ]
     }
