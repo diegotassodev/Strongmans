@@ -15,6 +15,7 @@ internal class MenuEditarStrongman : Menu {
             Console.WriteLine($"1. Nome: {strongman.Nome}");
             Console.WriteLine($"2. Altura: {strongman.AlturaMetros}m");
             Console.WriteLine($"3. Peso: {strongman.PesoKilogramas}kg");
+            Console.WriteLine($"4. Editar Levantamentos");
             Console.Write("Selecione o que deseja editar: ");
             int opcao; int.TryParse(Console.ReadLine()!, out opcao);
             
@@ -22,6 +23,7 @@ internal class MenuEditarStrongman : Menu {
                 case 1: EditarNome(strongman); strongman.SerializarStrongman(); RetornandoTelaPrincipal(); break;
                 case 2: EditarAltura(strongman); strongman.SerializarStrongman(); RetornandoTelaPrincipal(); break;
                 case 3: EditarPeso(strongman); strongman.SerializarStrongman(); RetornandoTelaPrincipal(); break;
+                case 4: MenuLevantamento.Executar(strongman); strongman.SerializarStrongman(); MenuLevantamento.Executar(strongman); break;
                 default: Console.WriteLine("Processo cancelado."); RetornandoTelaPrincipal(); break;
             }
         }

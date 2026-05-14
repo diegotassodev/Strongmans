@@ -21,7 +21,7 @@
     {
       "id": 2,
       "nome": "Eddie Hall",
-      "altura_metros": 1.90,
+      "altura_metros": 1.9,
       "peso_kilogramas": 164,
       "levantamentos_strongman": [
         {
@@ -99,7 +99,7 @@
     {
       "id": 8,
       "nome": "Magnus Ver Magnusson",
-      "altura_metros": 1.90,
+      "altura_metros": 1.9,
       "peso_kilogramas": 130,
       "levantamentos_strongman": [
         {
@@ -203,7 +203,7 @@
     {
       "id": 16,
       "nome": "Konstantine Janashia",
-      "altura_metros": 1.90,
+      "altura_metros": 1.9,
       "peso_kilogramas": 170,
       "levantamentos_strongman": [
         {
@@ -255,7 +255,7 @@
     {
       "id": 20,
       "nome": "Nick Best",
-      "altura_metros": 1.80,
+      "altura_metros": 1.8,
       "peso_kilogramas": 140,
       "levantamentos_strongman": [
         {
@@ -275,6 +275,11 @@
           "nome": "Deadlift",
           "quantia_peso": 476,
           "ano_realizado": 2020
+        },
+        {
+          "nome": "Super do Goku",
+          "quantia_peso": 300,
+          "ano_realizado": 200
         }
       ]
     },
@@ -333,7 +338,7 @@
     {
       "id": 26,
       "nome": "Kevin Faires",
-      "altura_metros": 1.80,
+      "altura_metros": 1.8,
       "peso_kilogramas": 125,
       "levantamentos_strongman": [
         {
@@ -346,12 +351,17 @@
     {
       "id": 27,
       "nome": "Iron Biby",
-      "altura_metros": 1.90,
+      "altura_metros": 1.9,
       "peso_kilogramas": 180,
       "levantamentos_strongman": [
         {
           "nome": "Log Lift",
           "quantia_peso": 230,
+          "ano_realizado": 2021
+        },
+        {
+          "nome": "Axle Press",
+          "quantia_peso": 217,
           "ano_realizado": 2021
         }
       ]
