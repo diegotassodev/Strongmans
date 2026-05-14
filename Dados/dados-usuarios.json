@@ -2,16 +2,23 @@
   "listaUsuarios": [
     {
       "id": 1,
-      "nome": "Diego",
+      "nome": "Diego Tasso",
       "email": "diego@email.com",
-      "senha": "123",
+      "senha": "1234",
       "tipo": "Strongmans.Modelos.Usuario"
     },
     {
       "id": 2,
       "nome": "admin",
-      "email": "root",
+      "email": "admin",
       "senha": "root",
+      "tipo": "Strongmans.Modelos.Admin"
+    },
+    {
+      "id": 3,
+      "nome": "Jeremy Mathias",
+      "email": "jery",
+      "senha": "2333",
       "tipo": "Strongmans.Modelos.Admin"
     }
   ]
