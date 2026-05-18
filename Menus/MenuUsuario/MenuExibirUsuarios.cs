@@ -4,12 +4,17 @@ namespace Strongmans.Menus;
 internal class MenuExibirUsuarios : Menu {
     
     public static void Executar() {
-        ExibirTitulo("Lista Usuários");
+        ExibirTituloTabela("Tabela Usuários", 35);
+        
+        var colunaId = "ID".PadRight(10);
+        var colunaNome = "Nome".PadRight(20);
+        var colunaEmail = "Email".PadRight(20);
+        var colunaSenha = "Senha".PadRight(20);
+        var colunaTipo = "Tipo".PadRight(10);
+
+        Console.WriteLine($"{colunaId}{colunaNome}{colunaEmail}{colunaSenha}{colunaTipo}");
+
         foreach (Usuario usuario in Usuario.listaUsuarios) {
-            Console.WriteLine($"ID: {usuario.Id}");
-            Console.WriteLine($"Nome: {usuario.Nome}");
-            Console.WriteLine($"Email: {usuario.Email}");
-            Console.WriteLine($"Senha: {usuario.Senha}");
 
             string nomeTipo = usuario.Tipo switch {
                 "Strongmans.Modelos.Usuario" => "Usuário Comum",
@@ -17,7 +22,7 @@ internal class MenuExibirUsuarios : Menu {
                 _ => "Erro"
             };
 
-            Console.WriteLine($"Tipo: {nomeTipo}\n");           
+            Console.WriteLine($"{usuario.Id,-10}{usuario.Nome,-20}{usuario.Email,-20}{usuario.Senha,-20}{nomeTipo,-20}");         
         }
     }
 }
